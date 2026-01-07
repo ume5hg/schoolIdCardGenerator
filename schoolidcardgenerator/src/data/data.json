@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Ram Sharma",
+    "role": "Student",
+    "class": "8",
+    "section": "A",
+    "roll_no": "23"
+  },
+  {
+    "name": "Sita KC",
+    "role": "Teacher",
+    "employee_id": "T-102"
+  },
+  {
+    "name": "Hari Thapa",
+    "role": "Staff",
+    "employee_id": "S-101"
+  },
+  {
+    "name": "Anjali Rai",
+    "role": "Student",
+    "class": "10",
+    "section": "B",
+    "roll_no": "05"
+  },
+  {
+    "name": "Binod Gurung",
+    "role": "Teacher",
+    "employee_id": "T-105"
+  },
+  {
+    "name": "Priyanka Yadav",
+    "role": "Student",
+    "class": "9",
+    "section": "C",
+    "roll_no": "12"
+  },
+  {
+    "name": "Siddharth Pant",
+    "role": "Staff",
+    "employee_id": "S-108"
+  },
+  {
+    "name": "Maya Tamang",
+    "role": "Student",
+    "class": "8",
+    "section": "A",
+    "roll_no": "41"
+  },
+  {
+    "name": "Rajesh Hamal",
+    "role": "Teacher",
+    "employee_id": "T-110"
+  },
+  {
+    "name": "Deepak Joshi",
+    "role": "Student",
+    "class": "12",
+    "section": "D",
+    "roll_no": "18"
+  },
+  {
+    "name": "Sunita Williams",
+    "role": "Teacher",
+    "employee_id": "T-112"
+  },
+  {
+    "name": "Kiran Ahir",
+    "role": "Staff",
+    "employee_id": "S-115"
+  },
+  {
+    "name": "Rohan Mehra",
+    "role": "Student",
+    "class": "7",
+    "section": "B",
+    "roll_no": "33"
+  },
+  {
+    "name": "Laxmi Prasad",
+    "role": "Staff",
+    "employee_id": "S-120"
+  },
+  {
+    "name": "Gita Bali",
+    "role": "Teacher",
+    "employee_id": "T-118"
+  }
+]
