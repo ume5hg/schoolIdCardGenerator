@@ -1,5 +1,7 @@
-export default function Table({data}){
-
+import {useNavigate} from 'react-router-dom'
+export default function Table({data,setSelectedPerson}){
+    const navigate=useNavigate();
+    
     return(
         <>
             <h2>Personnel Details</h2>
@@ -16,7 +18,11 @@ export default function Table({data}){
                 </thead>
                 <tbody>
                     {data && data.map((person,index)=>(
-                        <tr key={index}>
+                        <tr key={index}
+                            onClick={()=>{
+                                setSelectedPerson(person);
+                                navigate("/templates");
+                            }}>
                             <td>{person.name}</td>
                             <td>{person.role}</td>
                             <td>{person.employee_id?person.employee_id:"N/A"}</td>

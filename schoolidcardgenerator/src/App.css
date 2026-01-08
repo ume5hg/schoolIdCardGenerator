@@ -16,10 +16,113 @@ table th, table td{
 }
 
 tbody tr:hover{
-  background-color:#e4dede
+  background-color:#e4dede;
+  cursor:pointer;
 }
 
-table>
+.card-layouts-section{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+  Text-align:center;
+  border:solid 1px rgb(122, 120, 120);
+  border-radius:4px;
+  border-collapse:collapse;
+  padding:10px;
+}
+.vertical-layouts, .horizontal-layouts{
+  border: solid 1px rgb(122, 120, 120);
+  padding:5px;
+}
+
+.layouts-subheading{
+  text-align:left;
+}
+
+.templates-container{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  width:400px;
+  height:250px;
+  box-shadow: 0 5px 4px 5px rgba(0, 0, 0, 0.1);
+  margin:2rem;
+
+}
+.card-header{
+  display:flex;
+  gap:2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(32, 32, 103);
+  color:white;
+  padding:10px;
+}
+.school-name-address h2, .school-name-address p{
+  margin:0;
+}
+.logo-image{
+  height:50px;
+  width:50px;
+  border-radius:25px;
+}
+
+.card-body{
+  display:flex;
+  gap:50px;
+  justify-content: center;
+  align-items: center;
+  padding:5px;
+}
+.student-image{
+  height:120px;
+  width:120px;
+  object-fit:cover;
+  object-position:50% 0%;
+}
+.info,.student-related-info{
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+}
+.field{
+  display:flex;
+  gap:1rem;
+}
+.field span{
+  width:60px;
+}
+.class-section-field{
+  display:flex;
+  gap:1rem;
+}
+
+.label{
+  font-weight: 600;
+  font-size:small;
+}
+.value{
+  font-size:small;
+}
+
+
+.card-footer{
+  height:40px;
+  background-color:rgb(32, 32, 103);
+}
+
+.cardh2 .card-header, .cardh2 .card-footer{
+  background-color:rgb(112, 41, 41);
+}
+.cardh3 .card-header, .cardh3 .card-footer{
+  background-color:rgb(44, 96, 93);
+}
+
 button:hover {
   border-color: #646cff;
 }
