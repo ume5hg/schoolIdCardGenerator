@@ -5,6 +5,7 @@ export default function Table({data,setSelectedPerson}){
     return(
         <>
             <h2>Personnel Details</h2>
+            <p>Click on a row to create an ID card</p>
             <table className="data-table">
                 <thead>
                     <tr>

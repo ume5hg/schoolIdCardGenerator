@@ -4,7 +4,8 @@ export default function CardLayouts({selectedPerson}){
 
     return(
         <section className="card-layouts-section">
-            <h2 className="layouts-heading">Card Layouts</h2> 
+            <h2 className="layouts-heading">Card Layouts</h2>
+            <p>Click on a template to download printable ID card as a pdf file.</p> 
             <div className="vertical-layouts">
                 <h3 className="layouts-subheading">Vertical Layouts</h3>
                 <div className="templates-container">
