@@ -1,10 +1,23 @@
 import Logo from '../assets/logo.png'
 import StudentImage from '../assets/studentpicture.png'
 import './IDCard.css'
-export default function IDCard({selectedPerson, orientation, theme}){
+export default function IDCard({selectedPerson, orientation, theme,setSelectedTemplates, isPrintable}){
+    function handleToggle(e){
+        const isChecked = e.target.checked;
+        const templateId = `${orientation}-${theme}`
+        
+        setSelectedTemplates(prev => {
+            if(isChecked){
+                return [...prev,templateId];
+            }
+            else{
+                return prev.filter(id => id !== templateId);
+            }
+        })
+    };
 
     return(
-        <>
+        <div>
             <div className={`card ${orientation} ${theme}`}>
                 <div className="card-header">
                     <img src={Logo} className="logo-image" alt="school logo"/>
@@ -50,6 +63,7 @@ export default function IDCard({selectedPerson, orientation, theme}){
                 <div className="card-footer">
                 </div>
             </div>
-        </>
+            {isPrintable && <input type="checkbox" onChange={handleToggle}/>}
+        </div>
     )
 }
