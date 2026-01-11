@@ -5,7 +5,8 @@ export default function VerticalTemplates({selectedPerson,setSelectedTemplates})
     return(
         <>
            {theme.map((themenumber,index)=>(
-            <IDCard key={index} selectedPerson={selectedPerson} orientation="vertical" theme={themenumber} setSelectedTemplates={setSelectedTemplates} isPrintable={true} />
+            <IDCard key={index} selectedPerson={selectedPerson} orientation="vertical" theme={themenumber} setSelectedTemplates={setSelectedTemplates} isPrintable={true}
+            /** * isPrintable={true} tells the IDCard to render the checkbox unlike in the "Templates to be printed" section.*/ />
            ))}
         </>
     )

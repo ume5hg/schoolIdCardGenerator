@@ -18,11 +18,11 @@ export default function Table({data,setSelectedPerson}){
                     </tr>
                 </thead>
                 <tbody>
-                    {data && data.map((person,index)=>(
+                    {data && data.map((person,index)=>(//mapping the mock data to table rows
                         <tr key={index}
                             onClick={()=>{
                                 setSelectedPerson(person);
-                                navigate("/templates");
+                                navigate("/templates");//displays CardLayouts.jsx when a data-row in the table is clicked
                             }}>
                             <td>{person.name}</td>
                             <td>{person.role}</td>

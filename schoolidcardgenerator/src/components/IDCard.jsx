@@ -2,6 +2,12 @@ import Logo from '../assets/logo.png'
 import StudentImage from '../assets/studentpicture.png'
 import './IDCard.css'
 export default function IDCard({selectedPerson, orientation, theme,setSelectedTemplates, isPrintable}){
+
+    /*
+     handleToggle updates the parent state 'selectedTemplates'.
+     It uses a unique templateId to 
+     track which specific cards the user wants to print.
+     */
     function handleToggle(e){
         const isChecked = e.target.checked;
         const templateId = `${orientation}-${theme}`
@@ -18,6 +24,10 @@ export default function IDCard({selectedPerson, orientation, theme,setSelectedTe
 
     return(
         <div>
+            {/* Dynamic Class Names: 
+               to apply CSS based on orientation 
+               (horizontal/vertical) and theme (theme1/theme2/theme3).
+            */}
             <div className={`card ${orientation} ${theme}`}>
                 <div className="card-header">
                     <img src={Logo} className="logo-image" alt="school logo"/>
@@ -37,6 +47,11 @@ export default function IDCard({selectedPerson, orientation, theme,setSelectedTe
                             <span className="label">Role</span>
                             <span className="value">{selectedPerson.role?selectedPerson.role:"N/A"}</span>
                         </div>
+
+
+                        {/* Conditional Logic: 
+                            If the person is a Student, show academic details.
+                        */}
                         {selectedPerson.role==="Student" && <div className="student-related-info">
                             <div className="field">
                                 <span className="label">Roll No.</span>
@@ -54,6 +69,10 @@ export default function IDCard({selectedPerson, orientation, theme,setSelectedTe
                                 
                         </div>}
                         
+
+                        {/* Conditional Logic: 
+                            If the person is NOT a student (e.g., Staff/Teacher), show Employee ID.
+                        */}
                         {selectedPerson.role!=="Student" && <div className='field non-student-related-info'>
                             <span className="label">ID</span>
                             <span className="value">{selectedPerson.employee_id?selectedPerson.employee_id:"N/A"}</span>
@@ -63,6 +82,11 @@ export default function IDCard({selectedPerson, orientation, theme,setSelectedTe
                 <div className="card-footer">
                 </div>
             </div>
+
+            {/* 
+                This checkbox only appears in the "Preview" list (where isPrintable is true).
+                It is hidden in the final PDF view or the 'templates-to-be-printed' section.
+            */}
             {isPrintable && <input type="checkbox" onChange={handleToggle}/>}
         </div>
     )

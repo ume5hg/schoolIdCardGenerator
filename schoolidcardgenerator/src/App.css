@@ -29,13 +29,8 @@ tbody tr:hover{
   border-radius:4px;
   border-collapse:collapse;
   padding:10px;
-  position:relative;
-
 }
-.templates-to-print{
 
-
-}
 
 .vertical-layouts, .horizontal-layouts{
   border: solid 1px rgb(122, 120, 120);
