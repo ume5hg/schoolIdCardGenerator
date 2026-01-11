@@ -38,7 +38,7 @@ export default function CardLayouts({selectedPerson}){
     return(
         <section className="card-layouts-section">
             <h2 className="layouts-heading">Card Layouts</h2>
-            <p>Select the checkbox to download your preferred template as a pdf file.</p> 
+            <p className="layouts-p">Select the checkbox of your preferred template to download as a pdf file.</p> 
             <div className="button-container">
                 <input type="checkbox" name="Select-all" id="select-all" onChange={handleSelectAll} />{/* select-all checkbox */}
                 <label for="select-all">Select all</label>
