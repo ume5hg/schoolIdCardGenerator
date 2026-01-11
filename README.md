@@ -1,16 +1,95 @@
-# React + Vite
+# School ID Card Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend React application that displays school ID card templates from mock data and allows users to generate printable PDFs directly in the browser.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- View a list of people (students and staff) from mock JSON data
+- Generate **vertical and horizontal ID card layouts**
+- Multiple color themes per layout
+- Select individual templates or **select all**
+- Download:
+  - A single ID card
+  - Multiple selected ID cards
+- Client-side PDF generation (no backend required)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** (Vite)
+- **React Router**
+- **html2pdf.js** for client-side PDF generation
+- Plain CSS for styling
+
+---
+
+## Simple Project Structure
+
+```
+
+src/
+├── components/
+│   ├── IDCard.jsx
+│   ├── HorizontalTemplates.jsx
+│   └── VerticalTemplates.jsx
+├── pages/
+│   ├── Table.jsx
+│   └── CardLayouts.jsx
+├── data/
+│   └── data.json
+├── App.jsx
+└── main.jsx
+
+````
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/ume5hg/schoolIdCardGenerator.git
+cd schoolIdCardGenerator
+npm install
+````
+
+### Run the app
+
+```bash
+npm run dev
+```
+
+Open the app in your browser at the URL shown in the terminal (usually `http://localhost:5173`).
+
+
+## How to Use
+
+1. On the home page, select a person from the table.
+2. Navigate to the templates page.
+3. Browse vertical and horizontal ID card templates.
+4. Select one or more templates using checkboxes (or use **Select All**).
+5. Click **Download** to generate a printable PDF.
+
+
+## PDF Generation Notes
+
+* PDFs are generated **entirely in the browser** using `html2pdf.js`.
+* A dedicated print container is rendered to ensure:
+
+  * Consistent card size
+  * Proper alignment
+  * Clean multi-card layout
+* The implementation supports both single and multiple card downloads.
+
+
+## Author
+
+**Umesh Gautam**
